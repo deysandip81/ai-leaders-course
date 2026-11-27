@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Business & Leaders — The Friendly Field Guide</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/content.css" />
+  <link rel="stylesheet" href="./css/audio.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <div class="brand-title">AI Field Guide</div>
+          <div class="brand-sub">Essentials &rarr; Leadership</div>
+        </div>
+      </div>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search topics..." aria-label="Search topics" />
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>Your progress</span><span id="progressText">0%</span></div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+      <nav id="nav" aria-label="Course sections"></nav>
+      <div class="sidebar-foot">
+        <button id="themeToggle" class="ghost-btn" title="Toggle theme">&#9680; Theme</button>
+        <button id="resetProgress" class="ghost-btn" title="Reset progress">&#8634; Reset</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu">&#9776;</button>
+        <div class="crumbs" id="crumbs"></div>
+        <div class="top-meta" id="topMeta"></div>
+      </header>
+      <article id="content" class="content"></article>
+      <footer class="pager">
+        <button id="prevBtn" class="pager-btn">&larr; <span></span></button>
+        <button id="doneBtn" class="done-btn">Mark as complete</button>
+        <button id="nextBtn" class="pager-btn"><span></span> &rarr;</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="./js/registry.js"></script>
+  <script src="./js/content/00-welcome.js"></script>
+  <script src="./js/content/01-what-is-ai.js"></script>
+  <script src="./js/content/02-how-machines-learn.js"></script>
+  <script src="./js/content/03-genai-llms.js"></script>
+  <script src="./js/content/04-ai-factory.js"></script>
+  <script src="./js/content/05-operating-models.js"></script>
+  <script src="./js/content/06-ai-native-agents.js"></script>
+  <script src="./js/content/07-opportunities.js"></script>
+  <script src="./js/content/08-experimentation.js"></script>
+  <script src="./js/content/09-scaling-readiness.js"></script>
+  <script src="./js/content/10-ethics-governance.js"></script>
+  <script src="./js/content/11-strategy-roadmap.js"></script>
+  <script src="./js/content/12-case-studies.js"></script>
+  <script src="./js/content/13-capstone.js"></script>
+  <script src="./js/content/14-final-quiz.js"></script>
+  <script src="./js/content/15-faq-glossary.js"></script>
+  <script src="./js/audio.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

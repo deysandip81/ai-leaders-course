@@ -1,0 +1,33 @@
+/* ===== Voice-over bar ===== */
+.vo-bar {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 28px; border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--accent) 7%, var(--panel));
+}
+.vo-play {
+  width: 42px; height: 42px; flex-shrink: 0; border-radius: 50%; border: 0; cursor: pointer;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-size: 15px;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.vo-bar.playing .vo-play { animation: vo-pulse 1.8s ease-in-out infinite; }
+@keyframes vo-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent); }
+  50% { box-shadow: 0 0 0 8px transparent; }
+}
+.vo-info { flex: 1; min-width: 200px; }
+.vo-title { font-size: 13px; font-weight: 600; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vo-track { display: flex; align-items: center; gap: 10px; }
+.vo-seek { flex: 1; accent-color: var(--accent); cursor: pointer; }
+.vo-time { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 82px; text-align: right; }
+.vo-skip, .vo-rate {
+  background: var(--panel-2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 6px 9px; font-size: 12px; cursor: pointer;
+}
+.vo-skip:hover, .vo-rate:hover { border-color: var(--accent); }
+.vo-auto { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; cursor: pointer; user-select: none; }
+.vo-auto input { accent-color: var(--accent); }
+@media (max-width: 900px) {
+  .vo-bar { padding: 10px 16px; }
+  .vo-skip, .vo-auto { display: none; }
+}
+@media print { .vo-bar { display: none; } }
